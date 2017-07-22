@@ -1,0 +1,16 @@
+---
+# tasks file for stack_status
+   
+   - name: Check that you can connect (GET) to a page and it returns a status 200
+     uri:
+       url: http://52.207.250.190
+
+   - uri:
+       url: http://52.207.250.190
+       return_content: yes
+     register: webpage
+
+   - name: Fail if Hello World! is not in the page content
+     fail:
+     when: "'Hello World!' not in webpage.content"
+

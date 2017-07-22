@@ -1,0 +1,5 @@
+[webserver]
+ec2-52-207-250-190.compute-1.amazonaws.com ansible_connection=ssh ansible_user=ubuntu  ansible_ssh_private_key_file=/home/ec2-user/key
+
+[localhost]
+ec2-52-73-3-112.compute-1.amazonaws.com ansible_connection=local

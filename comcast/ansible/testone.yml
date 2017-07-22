@@ -1,0 +1,11 @@
+ - hosts: ec2-54-84-197-182.compute-1.amazonaws.com
+   user: ec2-user
+   vars:
+    motd_welcome: 'welcome to netoworks\nLive.love.learn linux\n'
+    tasks:
+    - name: sample motd
+      copy:
+       src: /home/ec2-user/ansible/motd
+       dest: /etc/motd
+       content: "{{ motd_welcome }}"
+
